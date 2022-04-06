@@ -181,6 +181,8 @@ main {
 .descricao > #quanti input {
     background-color: var(--cor05);
     text-align: center;
+    border: none;
+    border-radius: 10px;
 }
 
 .descricao > #quanti label {
