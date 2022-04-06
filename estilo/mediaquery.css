@@ -1,35 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-/* Configuraçoes Globais */
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-:root {
-    --font01: 'Kumbh Sans', sans-serif;
-
-    --cor00: hsl(26, 100%, 55%);
-    --cor01: hsl(25, 100%, 94%);
-    --cor02: hsl(220, 13%, 13%);
-    --cor03: hsl(219, 9%, 45%);
-    --cor04: hsl(220, 14%, 75%);
-    --cor05: hsl(223, 64%, 98%);
-   
-}
-
-body, html {
-    max-width: 1440px;
-    margin: 0 auto;
-    font-family: var(--font01);
-    font-size: 1em;
-}
-
-a {
-    text-decoration: none;
-}
+@media (max-width: 860px) {
 
 /* Header */
 
@@ -40,7 +13,10 @@ header {
     align-items: center;
 
     padding: 30px 0px;
-    border-bottom: 2px solid var(--cor05);
+    border-bottom: none;
+    
+    margin: 0 auto;
+    max-width: 375px;
 }
 
 .cabecalho {
@@ -48,7 +24,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .cabecalho #logo {
@@ -60,8 +36,12 @@ header {
     max-width: 50px;
 }
 
+.cabecalho img:hover {
+    cursor: pointer;
+}
+
 .menu ul {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-around;
     gap: 40px;
@@ -85,14 +65,14 @@ header {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    max-width: 1280px;
+    max-width: 375px;
 
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 0px;
 }
 
 /* Coleçao */
@@ -103,7 +83,10 @@ main {
     justify-content: space-around;
     gap: 20px;
 
-    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    max-width: 375px;
 }
 
 .colecao #pictures {
@@ -113,11 +96,17 @@ main {
 }
 
 .colecao img {
-    border-radius: 10px;
+    border-radius: 0px;
+}
+
+.colecao img:hover {
+    cursor: pointer;
 }
 
 .colecao img#thumb {
     max-width: 400px;
+    box-shadow: none;
+    width: 100%;
 }
 
 .colecao img.pic {
@@ -131,10 +120,10 @@ main {
     flex-direction: column;
     gap: 20px;
     text-align: left;
-    max-width: 50%;
+    max-width: 90%;
 }
 
-.descricao > #div1 h2 {
+.descricao > #anuncio h2 {
     font-size: 0.8em;
     color: var(--cor00);
 
@@ -142,48 +131,68 @@ main {
     
 }
 
-.descricao > #div1 h1 {
-    font-size: 3em;
+.descricao > #anuncio h1 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-.descricao > #div1 p {
+.descricao > #anuncio p {
     color: var(--cor03);
+    line-height: 2em;
 }
 
-.descricao > #div2 h2 {
+.descricao > #preco {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descricao > #preco h2 {
     font-size: 1.8em;
     color: black;
     margin-bottom: 10px;
 }
 
-.descricao > #div2 h3 {
+.descricao > #preco h3 {
     font-size: 1em;
     color: var(--cor04);
 
     text-decoration: line-through;
 }
 
-.descricao > #div3 {
+.descricao > #quanti {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
 }
 
-.descricao > #div3 input {
+.descricao > #quanti input {
     background-color: var(--cor05);
+    text-align: center;
+
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
 }
 
-.descricao > #div3 label {
+.descricao > #quanti label {
     background-color: var(--cor00);
     color: white;
 
-    padding: 10px 50px;
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
-    
 }
 
-.descricao > #div3 label img {
+.descricao > #quanti label:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px var(--cor00);
+    transition-duration: 0.2s;
+}
+
+.descricao > #quanti label img {
     max-width: 16px;
+}
+    
 }

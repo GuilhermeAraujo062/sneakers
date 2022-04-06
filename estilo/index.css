@@ -1,0 +1,203 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Configuraçoes Globais */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --font01: 'Kumbh Sans', sans-serif;
+
+    --cor00: hsl(26, 100%, 55%);
+    --cor01: hsl(25, 100%, 94%);
+    --cor02: hsl(220, 13%, 13%);
+    --cor03: hsl(219, 9%, 45%);
+    --cor04: hsl(220, 14%, 75%);
+    --cor05: hsl(223, 64%, 98%);
+   
+}
+
+body, html {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: var(--font01);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 0px;
+    border-bottom: 2px solid var(--cor05);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+.cabecalho #logo {
+    font-size: 2em;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.199);
+}
+
+.cabecalho img#perfil {
+    max-width: 50px;
+}
+
+.cabecalho img:hover {
+    cursor: pointer;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+
+    list-style: none;
+}
+
+.menu ul > li > a {
+    color: var(--cor04);
+    padding-bottom: 42px;
+
+    
+}
+
+.menu ul > li > a:hover {
+    color: var(--cor02);
+    border-bottom: 3px solid var(--cor00);
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+/* Coleçao */
+
+.colecao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+
+    max-width: 50%;
+}
+
+.colecao #pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.colecao img {
+    border-radius: 10px;
+}
+
+.colecao img:hover {
+    cursor: pointer;
+}
+
+.colecao img#thumb {
+    max-width: 400px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.527);
+}
+
+.colecao img.pic {
+    max-width: 80px;
+}
+/* Descriçao */
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.descricao > #anuncio h2 {
+    font-size: 0.8em;
+    color: var(--cor00);
+
+    text-transform: uppercase;
+    
+}
+
+.descricao > #anuncio h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.descricao > #anuncio p {
+    color: var(--cor03);
+}
+
+.descricao > #preco h2 {
+    font-size: 1.8em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.descricao > #preco h3 {
+    font-size: 1em;
+    color: var(--cor04);
+
+    text-decoration: line-through;
+}
+
+.descricao > #quanti {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.descricao > #quanti input {
+    background-color: var(--cor05);
+    text-align: center;
+}
+
+.descricao > #quanti label {
+    background-color: var(--cor00);
+    color: white;
+
+    padding: 10px 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.descricao > #quanti label:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px var(--cor00);
+    transition-duration: 0.2s;
+}
+
+.descricao > #quanti label img {
+    max-width: 16px;
+}
